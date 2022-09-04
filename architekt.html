@@ -5,10 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Architekt</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+
+            <div class="header-line">
+                <a href="#!" class="header-logo">ArchiWeb</a>
+
+                <nav class="header-nav">
+                    <ul class="header-list">
+                        <li class="header-list-item">
+                            <a href="#!">Home</a>
+                        </li>
+                        <li class="header-list-item">
+                            <a href="#!">Projects</a>
+                        </li>
+                        <li class="header-list-item">
+                            <a href="#!">About</a>
+                        </li>
+                        <li class="header-list-item">
+                            <a href="#!">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-search">
+                    <a href="#!" class="search-header-img"><img src="img/svg/siearch.svg" alt="picture"></a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="intro">
+            <div class="intro-slider">
+                <input checked type="radio" name="respond" id="desktop">
+                    <article id="slider">
+                            <input checked type="radio" name="slider" id="switch1">
+                            <input type="radio" name="slider" id="switch2">
+                            <input type="radio" name="slider" id="switch3">
+                            <input type="radio" name="slider" id="switch4">
+                            <input type="radio" name="slider" id="switch5">
+                        <div id="slides">
+                            <div id="overflow">
+                                <div class="image">
+                                    <article><img src="img/intro-1.jpg"></article>
+                                    <article><img src="img/intro-2.jpg"></article>
+                                    <article><img src="img/intro-3.jpg"></article>
+                                    <article><img src="img/intro-4.jpg"></article>
+                                    <article><img src="img/intro-5.jpg"></article>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controls">
+                            <label for="switch1"></label>
+                            <label for="switch2"></label>
+                            <label for="switch3"></label>
+                            <label for="switch4"></label>
+                            <label for="switch5"></label>
+                        </div>
+                     
+                    </article>
+            </div>
+            
+            <div class="intro-info">
+                <div class="intro-title">
+                    Best Solution For Your Home
+                </div>
+                <div class="intro-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscingelit ut aliquam, purus sit amet 
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
     <script src="js/main.js"></script>
 </html>
