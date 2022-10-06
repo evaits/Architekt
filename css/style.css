@@ -75,7 +75,7 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 0 70px;
+    padding: 0 100px;
 }
 
 /* Header */
@@ -157,10 +157,13 @@ body {
 
 /* Intro */
 
+.intro {
+	height: 739px;
+}
+
 .intro-slider {
 	position: relative;
 	float: right;
-
 }
 
 #slider { /*положение слайдера*/
@@ -203,14 +206,18 @@ article img{ /*размер изображений слайдера*/
 #switch3:checked ~ #controls label:nth-child(2),
 #switch4:checked ~ #controls label:nth-child(3),
 #switch5:checked ~ #controls label:nth-child(4){
-	background: url('/img/prev.png') no-repeat; /*заливка фона картинкой без повторений*/
-	float: left;
+	background: url('/img/next.png') no-repeat; /*заливка фона картинкой без повторений*/
+	background-color: rgba(0, 229, 255, 0.532);
+	background-size: cover;
+	border-radius: 30%;
+	transform: rotate(180deg);
 	position: absolute;
-	right: 100px;
+	right: 80px;
 	bottom: -230px;
 	display: block;
 	height: 30px;
 	width: 30px;
+	padding: 15px;
 }
 
 /*настройка переключения и положения для правой стрелки*/
@@ -219,16 +226,22 @@ article img{ /*размер изображений слайдера*/
 #switch3:checked ~ #controls label:nth-child(4),
 #switch4:checked ~ #controls label:nth-child(5),
 #switch5:checked ~ #controls label:nth-child(1){
-	background: url('/img/next.png') no-repeat;
-	background-color: rgba(244, 246, 245, 0.7);;
-	background-size: cover;/*заливка фона картинкой без повторений*/
+	background: url('/img/next.png') no-repeat;/*заливка фона картинкой без повторений*/
+	background-color: rgba(0, 229, 255, 0.532);
+	background-size: cover;
+	border-radius: 30%;
 	float: right;
 	position: absolute;
-	right: 0;
+	right: 30px;
 	bottom: -230px;
 	display: block;
-	height: 30px;
-	width: 30px;
+	height: 25px;
+	width: 25px;
+	padding: 15px;
+}
+
+#controls {
+	background-color: #eed8d8;
 }
 
 label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
@@ -337,3 +350,121 @@ label, a{ /*при наведении на стрелки или переклю�
 	width: 436px;
 }
 
+/* Service */
+
+.service-container {
+	padding-top: 16px;
+	padding-bottom: 65px;
+	background: #254D4D33;
+}
+
+.service-title {
+	font-family: 'Playfair Display';
+	font-size: 51px;
+	line-height: 60px;
+	text-align: center;
+	color: #2F2E2E;
+	margin-bottom: 45px;
+}
+
+.service-cards {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+
+.service-card {
+	text-align: center;
+	grid-column: span 1;
+}
+
+.service-card-img {
+	margin-bottom: 10px;
+}
+
+.service-card-title {
+	font-family: 'Playfair Display';
+	font-size: 27px;
+	line-height: 32px;
+	text-align: center;
+	color: #2F2E2E;
+	margin-bottom: 9px;
+}
+
+.service-card-text {
+	font-family: 'Playfair Display';
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	color: #2F2E2E;
+}
+
+/* About Us */
+
+.about-container {
+	margin: 0 auto;
+    padding: 0 100px;
+	padding-top: 76px;
+	padding-bottom: 95px;
+	display: flex;
+}
+
+.about-img {
+	width: 735px;
+	height: 571px;
+	margin-right: 85px;
+}
+
+.about-title {
+	font-family: 'Playfair Display';
+	font-size: 51px;
+	line-height: 60px;
+	font-weight: 900;
+	margin-top: 65px;
+	margin-bottom: 27px;
+	color: #2F2E2E;
+}
+
+.about-text {
+	font-family: 'Playfair Display';
+	font-size: 31px;
+	line-height: 60px;
+	margin-bottom: 36px;
+	width: 600px;
+	color: #2F2E2E;
+}
+
+.about-more {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	position: relative;
+	color: #2F2E2E;
+}
+
+.about-more::after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: #2F2E2E; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.about-more:focus::after, .about-more:hover::after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: red; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
+/* Our Projects */
