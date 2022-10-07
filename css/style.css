@@ -468,3 +468,77 @@ label, a{ /*при наведении на стрелки или переклю�
 }
 
 /* Our Projects */
+.projects-container {
+	margin: 0 auto;
+    padding: 0 100px;
+	height: 500px;
+}
+
+.projects-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 71px;
+}
+
+.projects-title {
+	font-family: 'Playfair Display';
+	font-size: 51px;
+	font-weight: 900;
+	line-height: 60px;
+	color: #2F2E2E;
+}
+
+.projects-list {
+	display: flex;
+	margin-top: 30px;
+}
+
+.projects-list-item-1 {
+	font-family: 'Inter';
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	color: #2F2E2E;
+	position: relative;
+	margin-right: 135px;
+}
+
+.projects-list-item {
+	font-family: 'Inter';
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	color: #2F2E2E;
+	position: relative;
+}
+
+.projects-list-item:not(:last-child) {
+	margin-right: 135px;
+}
+
+.projects-list-item::after, .projects-list-item-1::after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: #2F2E2E; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.projects-list-item:focus::after, 
+.projects-list-item:hover::after, 
+.projects-list-item-1:focus::after, 
+.projects-list-item-1:hover::after   {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: red; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
