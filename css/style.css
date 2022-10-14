@@ -478,13 +478,12 @@ label, a{ /*при наведении на стрелки или переклю�
 
 /* Our Projects */
 .projects {
-	padding-bottom: 300px;
+	margin-bottom: 5px;
 }
 
 .projects-container {
 	margin: 0 auto;
     padding: 0 100px;
-	height: 500px;
 }
 
 .projects-header {
@@ -592,4 +591,77 @@ label, a{ /*при наведении на стрелки или переклю�
 /* Projects-active */
 .projects-content-active {
 	display: grid;
+}
+
+/* Persons */
+.persons-container {
+	margin: 0 auto;
+    padding: 0 100px;
+	margin-bottom: 300px;
+}
+
+.persons-title {
+	font-family: 'Playfair Display';
+	font-size: 51px;
+	font-weight: 900;
+	line-height: 60px;
+	color: #2F2E2E;
+	text-align: center;
+	margin-bottom: 78px;
+}
+
+.persons-content {
+	display: flex;
+	margin-bottom: 72px;
+}
+
+.persons-content-el {
+	display: flex;
+}
+
+.persons-content-el:not(:last-child) {
+	margin-right: 180px;
+}
+
+.persons-img {
+	width: 151px;
+	height: 151px;
+	margin-right: 29px;
+}
+
+.persons-name {
+	font-family: 'Playfair Display';
+	font-size: 35px;
+	line-height: 33px;
+	color: #2F2E2E;
+	margin-top: 20px;
+	margin-bottom: 16px;
+}
+
+.persons-text {
+	font-family: 'Playfair Display';
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 20px;
+	color: #2F2E2E;
+	width: 307px;
+}
+
+/* Persons-radio */
+.persons-tabs {
+	text-align: center;
+}
+
+.persons-radio {
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+	margin: 0 2px;
+	display:inline-block;
+	border-radius: 50%;
+	background-color: #E9E9E9;
+}
+
+.persons-radio:hover, .persons-radio-active {
+	background-color: #C4C4C4;
 }
