@@ -40,6 +40,15 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
+button{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
@@ -468,6 +477,10 @@ label, a{ /*при наведении на стрелки или переклю�
 }
 
 /* Our Projects */
+.projects {
+	padding-bottom: 300px;
+}
+
 .projects-container {
 	margin: 0 auto;
     padding: 0 100px;
@@ -477,7 +490,7 @@ label, a{ /*при наведении на стрелки или переклю�
 .projects-header {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 71px;
+	margin-bottom: 80px;
 }
 
 .projects-title {
@@ -493,16 +506,6 @@ label, a{ /*при наведении на стрелки или переклю�
 	margin-top: 30px;
 }
 
-.projects-list-item-1 {
-	font-family: 'Inter';
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 24px;
-	color: #2F2E2E;
-	position: relative;
-	margin-right: 135px;
-}
-
 .projects-list-item {
 	font-family: 'Inter';
 	font-weight: 500;
@@ -512,11 +515,21 @@ label, a{ /*при наведении на стрелки или переклю�
 	position: relative;
 }
 
-.projects-list-item:not(:last-child) {
+.projects-list-item-active {
+	font-family: 'Inter';
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	color: #2F2E2E;
+	position: relative;
+}
+
+
+.projects-list-el:not(:last-child) {
 	margin-right: 135px;
 }
 
-.projects-list-item::after, .projects-list-item-1::after {
+.projects-list-item::after, .projects-list-item-active::after {
 	content: "";
     display: block;
     position: absolute;
@@ -529,9 +542,8 @@ label, a{ /*при наведении на стрелки или переклю�
 }
 
 .projects-list-item:focus::after, 
-.projects-list-item:hover::after, 
-.projects-list-item-1:focus::after, 
-.projects-list-item-1:hover::after   {
+.projects-list-item:hover::after,
+.projects-list-item-active::after{
 	content: "";
     width: 100%;
     display: block;
@@ -541,4 +553,43 @@ label, a{ /*при наведении на стрелки или переклю�
     height: 2px; /* Высота линии */
     background-color: red; /* Цвет подчеркивания при появлении линии*/
     transition: width 0.5s;  /* Время эффекта */
+}
+
+/* Settings projects-content */
+
+.projects-content {
+	display: none;
+	grid-template-columns: repeat(3,1fr);
+	grid-column-gap: 120px;
+	text-align: center;
+}
+
+.projects-content-el {
+	grid-column: span 1;
+}
+
+.projects-img {
+	width: 400px;
+	margin-bottom: 13px;
+}
+
+.projects-text {
+	font-family: 'Playfair Display';
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 100;
+	color: #2F2E2E;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	word-wrap: break-word;
+}
+
+.projects-text:nth-child(-n+3) {
+	margin-bottom: 85px;
+}
+
+/* Projects-active */
+.projects-content-active {
+	display: grid;
 }
