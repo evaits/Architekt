@@ -597,7 +597,7 @@ label, a{ /*при наведении на стрелки или переклю�
 .persons-container {
 	margin: 0 auto;
     padding: 0 100px;
-	margin-bottom: 300px;
+	margin-bottom: 66px;
 }
 
 .persons-title {
@@ -613,6 +613,14 @@ label, a{ /*при наведении на стрелки или переклю�
 .persons-content {
 	display: flex;
 	margin-bottom: 72px;
+}
+
+.persons-element {
+	display: none;
+}
+
+.persons-element-active {
+	display: flex;
 }
 
 .persons-content-el {
@@ -649,7 +657,12 @@ label, a{ /*при наведении на стрелки или переклю�
 
 /* Persons-radio */
 .persons-tabs {
-	text-align: center;
+	display: flex;
+	justify-content:center;
+}
+
+.persons-tabs-radio:not(:last-child) {
+	margin-right: 15px;
 }
 
 .persons-radio {
@@ -659,9 +672,79 @@ label, a{ /*при наведении на стрелки или переклю�
 	margin: 0 2px;
 	display:inline-block;
 	border-radius: 50%;
-	background-color: #E9E9E9;
+	background-color: #cac7c7;
 }
 
 .persons-radio:hover, .persons-radio-active {
-	background-color: #C4C4C4;
+	background-color: #828080;
+}
+
+/* Footer */
+.footer-container {
+	margin: 0 auto;
+    padding: 0 100px;
+	padding-top: 47px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer {
+	background-color: #2E2F32;
+	color: white;
+	padding-bottom: 44px;
+}
+
+.footer-main-title {
+	font-family: 'Barlow';
+	font-weight: 600;
+	font-size: 42px;
+	line-height: 50px;
+	margin-bottom: 7px;
+}
+
+.footer-main-text {
+	width: 287px;
+	font-family: 'Inter';
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 35px;
+	margin-bottom: 46px;
+}
+
+.footer-img-link:not(:last-child) {
+	margin-right: 36px;
+}
+
+.footer-title {
+	font-family: 'Inter';
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 50px;
+	margin-bottom: 7px;
+}
+
+.footer-text {
+	width: 201px;
+	font-family: 'Inter';
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 35px;
+}
+
+.footer-link {
+	color: white;
+	font-family: 'Inter';
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 35px;
+	display: block;
+}
+
+.footer-link:hover {
+	color: rgb(157, 157, 157);
+}
+
+iframe {
+	width: 295px;
+	height: 221px;
 }
